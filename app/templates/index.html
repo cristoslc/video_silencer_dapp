@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Video</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+
+<div class="drop-area" id="drop-area">
+    Drag and drop your video file here or click to select a file.
+    <form method="post" action="/upload" enctype="multipart/form-data" id="file-form">
+        <input type="file" id="video-input" name="video" class="hidden" onchange="submitForm()">
+        <!-- Removed the class="hidden" from the form to make sure the input is included when submitted -->
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+<script>
+function submitForm() {
+    document.getElementById('file-form').submit();
+}
+</script>
+
+</body>
+</html>
