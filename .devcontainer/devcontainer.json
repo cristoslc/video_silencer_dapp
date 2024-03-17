@@ -10,7 +10,8 @@
                 "terminal.integrated.shell.linux": "/bin/bash"
             },
             "extensions": [
-                "ms-python.python"
+                "ms-python.python",
+                "ms-azuretools.vscode-docker"
             ]
         }
     },
@@ -18,5 +19,6 @@
         5000
     ],
     "postCreateCommand": "pip install -r requirements.txt",
+    "postStartCommand": "python /app/app.py",
     "remoteUser": "root"
 }
