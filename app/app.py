@@ -4,8 +4,8 @@ import os
 import subprocess
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads/'
-app.config['PROCESSED_FOLDER'] = 'processed/'
+app.config['UPLOAD_FOLDER'] = 'data/uploads/'
+app.config['PROCESSED_FOLDER'] = 'data/processed/'
 
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
